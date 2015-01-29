@@ -1,0 +1,108 @@
+<!doctype>
+<html lang='en'>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="main.css">
+		<link rel="stylesheet" href="grid.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<title> Prototype </title>
+	</head>
+
+	<body>
+		<main>
+			<h3> Split Bills </h3>
+			<p> Select number of roommates:
+				<select>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+					<option>6</option>
+					<option>7</option>
+					<option>8</option>
+					<option>9</option>
+				</select> 
+			</p>
+
+				<select>
+					<option>Select Bill</option> 
+					<option>Rent</option> 
+				  	<option>Hydro</option>
+				  	<option>Internet</option>
+				  	<option>Cable</option>
+				  	<option>Gas</option>
+				</select>
+				<input type="text" placeholder="amount">
+			
+			<div class="container">
+			    <div class="addMore">
+			    	<p>Add More</p>
+			    </div>
+
+			    <div class="content">
+			        <select>
+			            <option>Select Bill</option> 
+						<option>Rent</option> 
+					  	<option>Hydro</option>
+					  	<option>Internet</option>
+					  	<option>Cable</option>
+					  	<option>Gas</option>
+			        </select>
+			    </div>
+			</div>
+			<div class="space1"></div>
+			<div class="space1"></div>
+			<div class="space1"></div>
+			<div class="space1"></div>
+			<div class="space1"></div>
+			<div class="space1"></div>
+			<div class="space1"></div>
+			<div class="space1"></div>
+			<div class="space1"></div>
+			<div class="space1"></div>
+			<div class="space1"></div>
+
+
+			<div class="flatNav">
+				<a href="invoice.html" ><p>Calculate</p></a>
+			</div>
+			<div class="grid">
+				<div class='col-1of3'>
+					<div class="flatNav">
+						<a href='index.html' class='active'><p>Split Bill</p></a>
+					</div>
+				</div>
+
+				<div class='col-1of3'>
+					<div class="flatNav">
+						<a href="bill_history.html"><p>History</p></a>
+					</div>
+				</div>
+
+				<div class='col-1of3'>
+					<div class="flatNav">
+						<p>Setting</p>
+					</div>
+				</div>
+			</div>
+		</main>
+	</body>
+	<script type="text/javascript">
+		$(".addMore").click(function () {
+
+	    $header = $(this);
+	    //getting the next element
+	    $content = $header.next();
+	    //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
+	    $content.slideToggle(400, function () {
+	        //execute this after slideToggle is done
+	        //change text of header based on visibility of content div
+	        $header.text(function () {
+	            //change text based on condition
+	            return $content.is(":visible") ? "Select bill" : "";
+	        });
+	    });
+
+		});
+	</script>
+</html>
