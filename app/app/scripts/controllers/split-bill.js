@@ -27,7 +27,7 @@ angular.module('halloumiAppApp')
         $event.preventDefault();
     };
 
-    $scope.onchange = function (item) 
+    $scope.onchange = function ($event, item) 
     {
       $scope.sumOfValues = $scope.addItem.map(function (item) {
         return parseInt(item.billAmount, 10);
