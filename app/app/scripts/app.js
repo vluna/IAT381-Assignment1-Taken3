@@ -26,6 +26,14 @@ angular
         templateUrl: 'views/invoice.html',
         controller: 'InvoiceCtrl'
       })
+      .when('/tip-calculator', {
+        templateUrl: 'views/tip-calculator.html',
+        controller: 'TipCalculatorCtrl'
+      })
+      .when('/currency-converter', {
+        templateUrl: 'views/currency-converter.html',
+        controller: 'CurrencyConverterCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
