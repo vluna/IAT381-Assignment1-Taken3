@@ -21,7 +21,7 @@
             </span>
           </div>
 
-	            <input type="text" ng-change="onchange($event, item)" ng-model="item.billAmount" placeholder=" $ ...">
+	            <input type="text" ng-change="onchange(item)" ng-model="item.billAmount" placeholder=" $ ...">
 	            <span ng-hide="item.length == 1">
 	                <a ng-click="addItem.splice($index, 1)"><img src="images/remove.svg" height="30" width="30">Remove</a> <br><br>
 	            </span>
