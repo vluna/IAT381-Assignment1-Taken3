@@ -1,1 +1,18 @@
-<p>This is the tip-calculator view.</p>
+<div ng-controller="TipCalculatorCtrl">
+
+	Total Bill:
+    <input type="number" ng-model="totalBill" ng-change="updateTip()"placeholder="$...">
+    <br>
+    Number of Pepole:
+    <input type="number" ng-model="numOfPeople" ng-change="updateTip()"placeholder="# of People">
+    <hr/>
+	<fieldset>
+    	<label for="tip">Tip </label> {{tip}}%
+    	<input type="range" max="25" min="0" ng-change="updateTip()" ng-model="tip">
+    	<a ng-click='randomTip()'>Random Tip</a>
+  	</fieldset>
+    <hr/>
+    <p ng-model="tipAmount"> Tip amount: ${{tipAmount}} </p>
+    <p ng-model="totalAmount" > Total ${{totalAmount}}</p>
+    <p ng-model="amountPerPerson" > Total Per Person ${{amountPerPerson}}</p>
+</div>

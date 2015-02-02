@@ -21,20 +21,32 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li><a ng-href="#/split-bill">Split Bill</a></li>
-          <li><a ng-href="#/tip-calculator">Tip Calculator</a></li>
-          <li><a ng-href="#/currency-converter">Currency Converter</a></li>
-        </ul>
-        <h3 class="text-muted">Halloumi</h3>
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="navbar-header text-center">
+        <h4>Halloumi</h4> 
       </div>
+    </div>
 
+    <div class="container">
       <div ng-view=""></div>
 
       <div class="footer">
-        <p><span class="glyphicon glyphicon-console"></span> From IAT381 with love <span class="glyphicon glyphicon-heart"></span></p>
+        <div class="nav-pills navbar-fixed-bottom">
+          <div class="border row">
+            <div class="border col-xs-3 text-center">
+              <a ng-href="#/Home"><img class="hoverNav" src="images/home.svg" height="50" width="50"></a>
+            </div>
+            <div class="border col-xs-3 text-center">
+              <a ng-href="#/split-bill"><img class="hoverNav"  src="images/split-bill.svg" height="50" width="50"></a>
+            </div>
+            <div class="border col-xs-3 text-center">
+              <a ng-href="#/tip-calculator"><img class="hoverNav" src="images/tip-calculator.svg" height="50" width="50"></a>
+            </div>
+            <div class="border col-xs-3 text-center">
+              <a ng-href="#/currency-converter"><img class="hoverNav" src="images/currency-converter.svg" height="50" width="50"></a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -69,13 +81,13 @@
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
-
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/split-bill.js"></script>
         <script src="scripts/controllers/invoice.js"></script>
         <script src="scripts/controllers/tip-calculator.js"></script>
         <script src="scripts/controllers/currency-converter.js"></script>
+        <script src="scripts/controllers/home.js"></script>
         <!-- endbuild -->
 </body>
 </html>
