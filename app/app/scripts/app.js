@@ -34,6 +34,10 @@ angular
         templateUrl: 'views/currency-converter.html',
         controller: 'CurrencyConverterCtrl'
       })
+      .when('/home', {
+        templateUrl: 'views/home.html',
+        controller: 'HomeCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

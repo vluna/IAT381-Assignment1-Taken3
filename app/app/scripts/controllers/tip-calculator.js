@@ -14,4 +14,21 @@ angular.module('halloumiAppApp')
       'AngularJS',
       'Karma'
     ];
-  });
+
+    $scope.totalBill = '';
+    $scope.tip = 10;
+    $scope.numOfPeople = 1;
+
+    $scope.randomTip = function()
+    {
+    	$scope.tip = Math.floor((Math.random($scope.tip)*16)+10);
+    	$scope.updateTip();
+    };
+
+    $scope.updateTip = function() 
+    {
+		$scope.tipAmount = $scope.totalBill * $scope.tip/100;
+		$scope.totalAmount = $scope.totalBill + $scope.tipAmount;
+		$scope.amountPerPerson = $scope.totalAmount / $scope.numOfPeople;
+    };
+ });
