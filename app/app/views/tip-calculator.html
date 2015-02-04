@@ -1,18 +1,25 @@
 <div ng-controller="TipCalculatorCtrl">
+    <div class="appTitle">
+        <img src="images/tip-calculator.svg" width="50" height="50">
+        <h2>TIP CALCULATOR</h2>
+    </div>
+    <div class="sections">
+        <h4>Number of guests</h4>
+    </div>
+    <select ng-model="opt" ng-options="person.label for person in people" ng-change="change(opt)">
+    </select>
 
-	Total Bill:
+	<div class="sections">
+        <h4>Bill cost</h4>
+    </div>
     <input type="number" ng-model="totalBill" ng-change="updateTip()"placeholder="$...">
-    <br>
-    Number of Pepole:
-    <input type="number" ng-model="numOfPeople" ng-change="updateTip()"placeholder="# of People">
-    <hr/>
+    <br><br>
 	<fieldset>
-    	<label for="tip">Tip </label> {{tip}}%
-    	<input type="range" max="25" min="0" ng-change="updateTip()" ng-model="tip">
+    	<label for="tip">Tip </label> {{tip}}% <br><br>
+    	<input type="range" max="25" min="0" ng-change="updateTip()" ng-model="tip"> <br>
     	<a ng-click='randomTip()'>Random Tip</a>
-  	</fieldset>
-    <hr/>
-    <p ng-model="tipAmount"> Tip amount: ${{tipAmount}} </p>
-    <p ng-model="totalAmount" > Total ${{totalAmount}}</p>
-    <p ng-model="amountPerPerson" > Total Per Person ${{amountPerPerson}}</p>
+  	</fieldset><br>
+    <h4 ng-model="tipAmount"> Tip amount: ${{tipAmount}} </h4>
+    <h4 ng-model="totalAmount" > Total ${{totalAmount}}</h4>
+    <h4 ng-model="amountPerPerson" > Total Per Person ${{amountPerPerson}}</h4>
 </div>
