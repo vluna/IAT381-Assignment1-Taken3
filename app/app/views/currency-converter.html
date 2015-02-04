@@ -1,51 +1,50 @@
 
 <div ng-controller="CurrencyConverterCtrl">
-<!-- enter the amount for the currency being changed-->
-<h4>Initial Currency</h4>
-<input type="text" ng-model="initCur" placeholder=" $ ...">
-<div class="dropdown btn">
-
-
-
-
-  <div id="collectiondropDown" class="dropdown-toggle" id="dLabel" role="button" data-toggle="dropdown" data-target="#" >
-    <span>{{ selCurrency1 }}</span>
-<b class="caret"></b>
+  <div class="appTitle">
+    <img src="images/currency-converter.svg" width="50" height="50">
+    <h2>CURRENCY EXCHANGE</h2>
   </div>
+    <!-- enter the amount for the currency being changed-->
+    <div class="sections">
+      <h4>Current currency</h4>
+    </div>
 
-  <ul id="dropDownUL1" class="dropdown-menu pull-left" role="menu" aria-labelledby="dLabel">
-    <li ng-click="OnItemClick1('American')"> American </li>
-    <li ng-click="OnItemClick1('Greek')"> Greek </li>
-    <li ng-click="OnItemClick1('Mexican')"> Mexican </li>
-    <li ng-click="OnItemClick1('Philippines')"> Philippines </li>
-    <li ng-click="OnItemClick1('Canadian')"> Canadian </li>
-  </ul>
-</div>
-<hr/>
-	
+    <input type="text" ng-model="initCur" placeholder=" $ ______">
+    <div class="dropdown btn">
+      <div id="collectiondropDown" class="dropdown-toggle" id="dLabel" role="button" data-toggle="dropdown" data-target="#" >
+        <span>{{ selCurrency1 }}</span>
+        <b class="caret"></b>
+      </div>
 
-	<h4>Exchange Currency</h4>
+      <ul id="dropDownUL1" class="dropdown-menu pull-left" role="menu" aria-labelledby="dLabel">
+        <li ng-click="OnItemClick1('American')"> American </li>
+        <li ng-click="OnItemClick1('Greek')"> Greek </li>
+        <li ng-click="OnItemClick1('Mexican')"> Mexican </li>
+        <li ng-click="OnItemClick1('Philippines')"> Philippines </li>
+        <li ng-click="OnItemClick1('Canadian')"> Canadian </li>
+      </ul>
+    </div>	
+    <div class="sections">
+      <h4>Convert currency to</h4>
+    </div>
 
-	<!-- http://stackoverflow.com/a/16487228 -->
-	<!-- Changed the id -->
-<div class="dropdown btn">
-  <div id="collectiondropDown2" class="dropdown-toggle" id="dLabel2" role="button" data-toggle="dropdown" data-target="#" >
-    <span>{{ selCurrency2 }}</span>
-<b class="caret"></b>
-  </div>
+  	<!-- http://stackoverflow.com/a/16487228 -->
+  	<!-- Changed the id -->
+    <div class="dropdown btn">
+      <div id="collectiondropDown2" class="dropdown-toggle" id="dLabel2" role="button" data-toggle="dropdown" data-target="#" >
+        <span>{{ selCurrency2 }}</span>
+        <b class="caret"></b>
+      </div>
 
-  <ul id="dropDownUL2" class="dropdown-menu pull-left" role="menu" aria-labelledby="dLabel">
-    <li ng-click="OnItemClick2('American')"> American </li>
-    <li ng-click="OnItemClick2('Greek')"> Greek </li>
-    <li ng-click="OnItemClick2('Mexican')"> Mexican </li>
-    <li ng-click="OnItemClick2('Philippines')"> Philippines </li>
-    <li ng-click="OnItemClick2('Canadian')"> Canadian </li>
-  </ul>
-</div>
- <hr>
- 
- <button ng-click='exchangeIt()'> Exchange </button></a>
- <h4>{{ Exchanged }}</h4>
+      <ul id="dropDownUL2" class="dropdown-menu pull-left" role="menu" aria-labelledby="dLabel">
+        <li ng-click="OnItemClick2('American')"> American </li>
+        <li ng-click="OnItemClick2('Greek')"> Greek </li>
+        <li ng-click="OnItemClick2('Mexican')"> Mexican </li>
+        <li ng-click="OnItemClick2('Philippines')"> Philippines </li>
+        <li ng-click="OnItemClick2('Canadian')"> Canadian </li>
+      </ul>
+    </div>
 
- 
+    <button ng-click='exchangeIt()'> Exchange </button></a>
+    <h4>{{ Exchanged }}</h4>
 </div>

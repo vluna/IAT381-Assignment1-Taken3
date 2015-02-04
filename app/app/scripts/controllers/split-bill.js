@@ -16,6 +16,24 @@ angular.module('halloumiAppApp')
       'Karma'
     ];
 
+    $scope.roommates = [
+      { label: '2', value: 2 },
+      { label: '3', value: 3 },
+      { label: '4', value: 4 },
+      { label: '5', value: 5 },
+      { label: '6', value: 6 },
+      { label: '7', value: 7 },
+      { label: '8', value: 8 },
+      { label: '9', value: 9 }
+    ];
+
+    $scope.numOfRoommates = 0;
+
+    $scope.change = function(option)
+    {
+      $scope.numOfRoommates = option.value;
+    }
+    
   	$scope.sumOfValues = 0;
 
     // The items that you want to sum.
@@ -38,9 +56,7 @@ angular.module('halloumiAppApp')
 
     $scope.calculate = function() 
     {
-    	$scope.roommatesCount = $scope.numOfRoommates;
-
-    	$scope.billSplited = $scope.sumOfValues / $scope.roommatesCount;
+    	$scope.billSplited = $scope.sumOfValues / $scope.numOfRoommates;
 
     	$scope.result = ('Cost per person: $ ' + $scope.billSplited);
   	};
