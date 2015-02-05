@@ -22,10 +22,6 @@ angular
         templateUrl: 'views/split-bill.html',
         controller: 'SplitBillCtrl'
       })
-      .when('/invoice', {
-        templateUrl: 'views/invoice.html',
-        controller: 'InvoiceCtrl'
-      })
       .when('/tip-calculator', {
         templateUrl: 'views/tip-calculator.html',
         controller: 'TipCalculatorCtrl'
@@ -37,6 +33,10 @@ angular
       .when('/home', {
         templateUrl: 'views/home.html',
         controller: 'HomeCtrl'
+      })
+      .when('/invoice', {
+        templateUrl: 'views/invoice.html',
+        controller: 'InvoiceCtrl'
       })
       .otherwise({
         redirectTo: '/'
