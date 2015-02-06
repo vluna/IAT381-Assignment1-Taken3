@@ -8,6 +8,8 @@
  *
  * Main module of the application.
  */
+
+ var testSlide = 
 angular
   .module('halloumiAppApp', [
     'ngAnimate',
@@ -20,25 +22,41 @@ angular
     $routeProvider
       .when('/split-bill', {
         templateUrl: 'views/split-bill.html',
-        controller: 'SplitBillCtrl'
+        controller: 'SplitBillCtrl',
+        level:2
       })
       .when('/tip-calculator', {
         templateUrl: 'views/tip-calculator.html',
-        controller: 'TipCalculatorCtrl'
+        controller: 'TipCalculatorCtrl',
+        level:3
       })
       .when('/currency-converter', {
         templateUrl: 'views/currency-converter.html',
-        controller: 'CurrencyConverterCtrl'
+        controller: 'CurrencyConverterCtrl',
+        level:4
       })
-      .when('/home', {
+      .when('/', {
         templateUrl: 'views/home.html',
-        controller: 'HomeCtrl'
-      })
-      .when('/invoice', {
-        templateUrl: 'views/invoice.html',
-        controller: 'InvoiceCtrl'
+        controller: 'HomeCtrl',
+        level:1
       })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/',
+        level:1
       });
   });
+
+testSlide.run(function($rootScope,$animate){
+  $rootScope.panStyle="view-frame-forward";
+   $rootScope.$on('$routeChangeSuccess', function(ev,next,current) {
+      
+         if(current.$$route.level > next.$$route.level){
+            $rootScope.panStyle="view-frame-back";
+         }
+     else if(current.$$route.level < next.$$route.level){
+            $rootScope.panStyle="view-frame-forward";
+         }
+      });
+    
+   });
+

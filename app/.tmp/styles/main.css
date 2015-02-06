@@ -31,12 +31,6 @@ body {
   border-top: 1px solid #e5e5e5;
 }
 
-/* Customize container */
-@media (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
-}
 .container-narrow > hr {
   margin: 30px 0;
 }
@@ -59,24 +53,7 @@ body {
   margin-top: 28px;
 }
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
-}
+
 
 .navText {
   color: white;
@@ -101,18 +78,19 @@ body {
   padding-top: 30px; 
   margin-bottom: 70px;
   margin-left: 10px; 
+  font-family: helvetica, sans-serif;
 }
 
 .navbar-inverse {
   background: #a9a9a9;
-  padding-top: 10px;
-  padding-bottom:10px;
+  padding-top: 5px;
+  padding-bottom:5px;
 }
 
 .btn-primary {
   height: 60px;
-  width: 340px;
-  font-size: 30px;
+  width: 97%;
+  font-size: 25px;
   color: white;
 }
 
@@ -176,3 +154,18 @@ input[type="range"]::-webkit-slider-thumb {
   border-radius: 50%;
   border: 6px solid #2c3e50;
 }
+
+/* PAN SCREEN FORWARD*/
+.view-frame-forward.ng-enter {
+  -webkit-animation: .2s fwd-in;
+  animation: .2s fwd-in;
+}
+/* PAN SCREEN BACKWARD */
+.view-frame-back.ng-enter {
+  -webkit-animation: .2s back-in;
+  animation: .2s back-in;
+}
+/* PANNING FORWARD THE SCREEN SLIDES IN */
+@-webkit-keyframes fwd-in {from{-webkit-transform: translate3d(100%, 0, 0);}to{-webkit-transform: translate3d(0, 0, 0);}}
+/* PANNING FORWARD OLD SCREEN SLIDES OUT */
+@-webkit-keyframes back-in {from{-webkit-transform: translate3d(-100%, 0, 0);}to{-webkit-transform: translate3d(0, 0, 0);}}

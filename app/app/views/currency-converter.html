@@ -16,13 +16,13 @@
         <b class="caret"></b>
       </div>
 
-      <ul id="dropDownUL1" class="dropdown-menu pull-left" role="menu" aria-labelledby="dLabel">
-        <li ng-click="OnItemClick1('American')"> American </li>
-        <li ng-click="OnItemClick1('Greek')"> Greek </li>
-        <li ng-click="OnItemClick1('Mexican')"> Mexican </li>
-        <li ng-click="OnItemClick1('Philippines')"> Philippines </li>
-        <li ng-click="OnItemClick1('Canadian')"> Canadian </li>
-      </ul>
+      <select id="dropDownUL1" class="dropdown-menu pull-left" role="menu" aria-labelledby="dLabel">
+        <option ng-click="OnItemClick1('American')"> American </option>
+        <option ng-click="OnItemClick1('Greek')"> Greek </option>
+        <option ng-click="OnItemClick1('Mexican')"> Mexican </option>
+        <option ng-click="OnItemClick1('Philippines')"> Philippines </option>
+        <option ng-click="OnItemClick1('Canadian')"> Canadian </option>
+      </select>
     </div>	
     <div class="sections">
       <h4>Convert currency to</h4>
@@ -44,7 +44,7 @@
         <li ng-click="OnItemClick2('Canadian')"> Canadian </li>
       </ul>
     </div>
-
-    <button ng-click='exchangeIt()'> Exchange </button></a>
+    <br><br>
+    <button class="btn btn-primary" ng-click='exchangeIt()'> EXCHANGE </button></a>
     <h4>{{ Exchanged }}</h4>
 </div>
