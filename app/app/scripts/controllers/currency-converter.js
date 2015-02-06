@@ -25,11 +25,13 @@ angular.module('halloumiAppApp')
 	//First dropdown
 	$scope.OnItemClick1 = function(event) {
     	$scope.selCurrency1 = event;
+		console.log($scope.selCurrency1,'hello');
     };
   
 	//Second dropdown
 	$scope.OnItemClick2 = function(event) {
     	$scope.selCurrency2 = event;
+		console.log($scope.selCurrency2,'hi');
 	};
 
    $scope.exchangeIt = function(){
