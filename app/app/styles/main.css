@@ -54,17 +54,12 @@ body {
 }
 
 
-
 .navText {
   color: white;
   font-size: 7px;
 }
 
 .hoverNav {
-  opacity: .5;
-}
-
-.hoverNav:hover, .hoverNav:active {
   opacity: 1;
 }
 
@@ -190,10 +185,6 @@ margin-top:15px;
 margin-left:150px;
 } 
 
-div.row :target{
-opacity:1;
-}
-
 .appstatement {
   text-align: center;
   /*margin-top:10%; */
@@ -224,6 +215,6 @@ opacity:1;
 
 .homelogo {
   text-align: center;
-  margin-top: 15%;
+  margin-top: 5%;
   margin-left: -10px;
 }
