@@ -1,0 +1,58 @@
+
+<div ng-controller="CurrencyConverterCtrl">
+  <div class="appTitle">
+    <img src="images/currency-converter.svg" width="50" height="50">
+    <h2>CURRENCY EXCHANGE</h2>
+  </div>
+
+    <!-- enter the amount for the currency being changed-->
+    <div class="sections">
+      <h4>Current currency</h4>
+    </div>
+
+    <div class="dropdown" >
+      <div id="collectiondropDown" class="dropdown-toggle" id="dLabel" role="button" data-toggle="dropdown" data-target="#" >
+        <span>{{ selCurrency1 }}</span>	
+        <b class="caret"></b>
+      </div>
+
+		<ul id="dropDownUL" class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+			<li ng-click="OnItemClick1('American')"> USD - American </li>
+			<li ng-click="OnItemClick1('Greek')"> EUR - Greek </li>
+			<li ng-click="OnItemClick1('Mexican')"> MEX - Mexican </li>
+			<li ng-click="OnItemClick1('Philippines')"> PHP Philippines </li>
+			<li ng-click="OnItemClick1('Canadian')"> CAN - Canadian </li>
+		</ul>
+    </div>	
+	
+	<input type="number" ng-model="initCur" placeholder=" $ ______">
+
+    <div class="sections">
+      <h4>Convert currency to</h4>
+    </div>
+	
+  	<!-- http://stackoverflow.com/a/16487228 -->
+  	<!-- Changed the id -->
+    <div class="dropdown">
+      <div id="collectiondropDown" class="dropdown-toggle" id="dLabel2" role="button" data-toggle="dropdown" data-target="#" >
+        <span>{{ selCurrency2 }}</span>
+        <b class="caret"></b>
+      </div>
+
+      <ul id="dropDownUL" class="dropdown-menu" role="menu" aria-labelledby="dLabel2">
+        <li ng-click="OnItemClick2('American')"> USD - American </li>
+        <li ng-click="OnItemClick2('Greek')"> EUR - Greek </li>
+        <li ng-click="OnItemClick2('Mexican')"> MEX - Mexican </li>
+        <li ng-click="OnItemClick2('Philippines')"> PHP - Philippines </li>
+        <li ng-click="OnItemClick2('Canadian')"> CAN - Canadian </li>
+      </ul>
+    </div>
+	
+	<div class='result'>
+		<h4>{{ Exchanged }}</h4>
+    </div>
+	
+	<br><br>
+    <button class="btn btn-primary" ng-click='exchangeIt()'> EXCHANGE </button></a>
+
+</div>

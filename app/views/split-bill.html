@@ -1,0 +1,46 @@
+<div ng-controller="SplitBillCtrl">
+    <div class="appTitle">
+        <img src="images/split-bill.svg" width="50" height="50">
+        <h2>SPLIT BILL</h2>
+    </div>
+
+	<div class="sections">
+        <h4>Number of roommates</h4>
+    </div>
+
+    <select ng-model="opt" ng-options="roommate.label for roommate in roommates" ng-change="change(opt)">
+    </select>
+
+    <div class="sections">
+    	<h4>Select bill you wish to add</h4>
+    </div>
+
+	<div ng-repeat="item in addItem">
+        <div style="display:inline">
+            <span>
+                <select>
+        	    	<option ng-model="select-bill"> Select bill </option>
+					<option ng-model="rent"> Rent </option>
+			    	<option ng-model="hydro"> Hydro </option>
+			    	<option ng-model="internet"> Internet </option>
+					<option ng-model="cable"> Cable </option>
+			    	<option ng-model="utilities"> Utilities </option>
+			    	<option ng-model="other"> Other </option>
+				</select>
+            </span>
+        </div>
+
+        <input type="number" ng-change="onchange($event, item)" ng-model="item.billAmount" placeholder=" $ ______">
+
+        <span ng-hide="item.length == 1">
+            <a ng-click="addItem.splice($index, 1)"><img src="images/remove.svg" height="30" width="30"></a><br><br>
+        </span>
+    </div>
+    <div class="addIconCenter">
+    <a href ng-click="newItem($event)"><img src="images/add.svg" height="30" width="30"></a> </div>
+
+    <h3> Total: $ {{sumOfValues}} </h3>
+    <h3>{{result}}</h3>
+
+    <button class="btn btn-primary" ng-click='calculate()'>CALCULATE</button></a>
+</div>
