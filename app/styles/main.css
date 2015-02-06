@@ -63,10 +63,6 @@ body {
   opacity: 1;
 }
 
-.hoverNav:hover {
-  opacity: .5;
-}
-
 .navbar-header {
   width:100%;
   color: white;
