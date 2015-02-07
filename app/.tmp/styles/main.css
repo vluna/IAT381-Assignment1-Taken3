@@ -54,6 +54,7 @@ body {
 }
 
 
+
 .navText {
   color: white;
   font-size: 7px;
@@ -165,25 +166,6 @@ input[type="range"]::-webkit-slider-thumb {
 /* PANNING FORWARD OLD SCREEN SLIDES OUT */
 @-webkit-keyframes back-in {from{-webkit-transform: translate3d(-100%, 0, 0);}to{-webkit-transform: translate3d(0, 0, 0);}}
 
-.dropdown{
-  height: 25px; 
-  width: 130px;  
-  background: white;
-  border: 1px solid #ccc; 
-  padding-left:25px;
-  padding-bottom:25px;
-  padding-right:0px;
-  float:left;
-}
-
-.dropdown-menu li{
-padding-left:25px;
-}
-
-.result h4{
-margin-top:15px;
-margin-left:150px;
-} 
 
 .appstatement {
   text-align: center;
@@ -197,7 +179,7 @@ margin-left:150px;
 .logotitle {
   text-align: center;
   /*margin-top:10%; */
-  font-size: 6rem;
+  font-size: 6.25rem;
   font-family: 'Fjalla One', sans-serif;
   text-decoration: underline;
   margin-bottom: -1.25rem;
@@ -217,4 +199,25 @@ margin-left:150px;
   text-align: center;
   margin-top: 5%;
   margin-left: -10px;
+}
+
+
+.dropdown{
+  height: 25px; 
+  width: 130px;  
+  background: white;
+  border: 1px solid #ccc; 
+  padding-left:25px;
+  padding-bottom:25px;
+  padding-right:0px;
+  float:left;
+}
+
+.dropdown-menu li{
+padding-left:25px;
+}
+
+.result h4{
+margin-top:15px;
+margin-left:150px;
 }

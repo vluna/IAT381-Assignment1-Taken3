@@ -19,7 +19,7 @@
     	<input type="range" max="25" min="0" ng-change="updateTip()" ng-model="tip"> <br>
     	<a ng-click='randomTip()'>Random Tip</a>
   	</fieldset><br>
-    <h4 ng-model="tipAmount"> Tip amount: ${{tipAmount}} </h4>
-    <h4 ng-model="totalAmount" > Total ${{totalAmount}}</h4>
-    <h4 ng-model="amountPerPerson" > Total Per Person ${{amountPerPerson}}</h4>
+    <h4 ng-model="tipAmount"> Tip amount: ${{tipAmount.toFixed(2)}} </h4>
+    <h4 ng-model="totalAmount" > Total ${{totalAmount.toFixed(2)}}</h4>
+    <h4 ng-model="amountPerPerson" > Total Per Person ${{amountPerPerson.toFixed(2)}}</h4>
 </div>

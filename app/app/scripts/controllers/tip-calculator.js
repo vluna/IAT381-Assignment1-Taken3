@@ -46,8 +46,8 @@ angular.module('halloumiAppApp')
 
     $scope.updateTip = function() 
     {
-		$scope.tipAmount = $scope.totalBill * $scope.tip/100;
-		$scope.totalAmount = $scope.totalBill + $scope.tipAmount;
-		$scope.amountPerPerson = $scope.totalAmount / $scope.numOfPeople;
+		  $scope.tipAmount = ($scope.totalBill * $scope.tip/100);
+		  $scope.totalAmount = $scope.totalBill + $scope.tipAmount;
+		  $scope.amountPerPerson = ($scope.totalAmount / $scope.numOfPeople);
     };
  });

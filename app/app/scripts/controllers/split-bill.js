@@ -58,6 +58,6 @@ angular.module('halloumiAppApp')
     {
     	$scope.billSplited = $scope.sumOfValues / $scope.numOfRoommates;
 
-    	$scope.result = ('Cost per person: $ ' + $scope.billSplited);
+    	$scope.result = ('Cost per person: $ ' + $scope.billSplited.toFixed(2));
   	};
 });

@@ -121,7 +121,7 @@ angular.module('halloumiAppApp')
     {
     	$scope.billSplited = $scope.sumOfValues / $scope.numOfRoommates;
 
-    	$scope.result = ('Cost per person: $ ' + $scope.billSplited);
+    	$scope.result = ('Cost per person: $ ' + $scope.billSplited.toFixed(2));
   	};
 }]);
 'use strict';
@@ -172,9 +172,9 @@ angular.module('halloumiAppApp')
 
     $scope.updateTip = function() 
     {
-		$scope.tipAmount = $scope.totalBill * $scope.tip/100;
-		$scope.totalAmount = $scope.totalBill + $scope.tipAmount;
-		$scope.amountPerPerson = $scope.totalAmount / $scope.numOfPeople;
+		  $scope.tipAmount = ($scope.totalBill * $scope.tip/100);
+		  $scope.totalAmount = $scope.totalBill + $scope.tipAmount;
+		  $scope.amountPerPerson = ($scope.totalAmount / $scope.numOfPeople);
     };
  }]);
 'use strict';
